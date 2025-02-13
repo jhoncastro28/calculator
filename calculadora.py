@@ -1,20 +1,24 @@
 def suma(a, b):
     return a + b
+def resta(a, b):
+    return a - b
 
 def calculadora():
     print("Calculadora Básica")
     print("1. Suma")
-
-    opcion = input("Elige una opción (1): ")
+    print("2. Resta")
     
-    if opcion in ('1'):
+    opcion = input("Elige una opción (1/2): ")
+    
+    if opcion in ('1', '2'):
         try:
             num1 = float(input("Ingresa el primer número: "))
             num2 = float(input("Ingresa el segundo número: "))
             
             if opcion == '1':
                 print("Resultado:", suma(num1, num2))
-
+            if opcion == '2':
+                print("Resultado:", resta(num1, num2))
         except ValueError:
             print("Error: Ingresa valores numéricos válidos")
     else:
