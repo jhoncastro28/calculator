@@ -4,16 +4,19 @@ def resta(a, b):
     return a - b
 def multiplicacion(a, b):
     return a * b
+def division(a, b):
+    return a / b
 
 def calculadora():
     print("Calculadora Básica")
     print("1. Suma")
     print("2. Resta")
     print("3. Multiplicación")
+    print("4. Division")
     
-    opcion = input("Elige una opción (1/2/3): ")
+    opcion = input("Elige una opción (1/2/3/4): ")
     
-    if opcion in ('1', '2'):
+    if opcion in ('1', '2', '3', '4'):
         try:
             num1 = float(input("Ingresa el primer número: "))
             num2 = float(input("Ingresa el segundo número: "))
@@ -24,6 +27,8 @@ def calculadora():
                 print("Resultado:", resta(num1, num2))
             elif opcion == '3':
                 print("Resultado:", multiplicacion(num1, num2))
+            elif opcion == '4':
+                print("Resultado:", division(num1, num2))
         except ValueError:
             print("Error: Ingresa valores numéricos válidos")
     else:
